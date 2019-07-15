@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from './user';
 import { Repository } from './repository';
-import { environment } from '../environments/environment';
+// import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class ProfileService {
 
     const promise = new Promise(((resolve, reject) => {
       this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName +
-      '?access_token=' + environment.apiUrl)
+      '?access_token=' )
 
       .toPromise().then(response => {
         this.user.login = response.login;
