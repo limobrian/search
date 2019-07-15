@@ -5,6 +5,7 @@
 
 body {
     background-color: #f2f2f2;
+    overflow-x: hidden;
      
   }
   a {
@@ -17,4 +18,12 @@ body {
   }
 ul{
     justify-content: space-between;
+  }
+.resize{
+  padding:15%;
+  font-size: 2em;
+  width: 70px;
+}
+li{
+  padding:5.5%
 }
