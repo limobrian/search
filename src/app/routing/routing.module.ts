@@ -1,24 +1,27 @@
+import { LandingPageComponent } from './../landing-page/landing-page.component';
+import { AppComponent } from './../app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule,Routes} from '@angular/router'
+import {RouterModule, Routes} from '@angular/router';
 
-import { SearchComponent } from '../search/search.component';
-import { AboutComponent } from '../about/about.component';
+import { UserComponent } from './../user/user.component';
+
 import { ProfileComponent } from '../profile/profile.component';
-import { NotFoundComponent } from '../not-found/not-found.component';
+
+// Defining routes
+const routes: Routes = [
+  {path: '', component: LandingPageComponent},
+ {path: 'user/repositories?', component: ProfileComponent},
+ {path: 'userprofile?', component: UserComponent }
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot([
-      {path: 'profile', component:ProfileComponent},
-      {path: 'search', component:SearchComponent},
-      {path: 'about', component:AboutComponent},
-      {path:"",redirectTo:"/search",pathMatch:"full"},
-      {path: '**', component:NotFoundComponent}
-      ])
-  ],
-  exports:[RouterModule],
-  declarations: []
+ imports: [
+   CommonModule,
+   RouterModule.forRoot(routes)
+
+ ],
+ exports: [RouterModule],
+ declarations: []
 })
 export class RoutingModule { }

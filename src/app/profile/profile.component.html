@@ -1,34 +1,31 @@
-
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12" *ngIf = "user">
-			<div class="row">
-				<div class="col-md-6">
-					<h3>{{user.name}}</h3>
-					<img class="img-thumbnail github-avatar" src="{{user.avatar_url}}">
-				</div>
-				<div class="col-md-6">
-					<div class="stats">
-						<span class="label label-default">Public Repos: {{user.public_repos}}</span>
-						<span class="label label-primary">Followers:   {{user.followers}}</span>
-						<span class="label label-success">Following:  {{user.following}}</span>
-						<span class="label label-info">Public Gists: {{user.public_gists}}</span>
-					</div>
-					<div>
-						<ul class="list-group">
-							<li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
-							<li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
-							<li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
-							<li class="list-group-item"><strong>Blog: </strong>{{user.blog}}</li>
-							<li class="list-group-item"><strong>Member Since: </strong>{{user.created_at}}</li>
-						</ul>
-					</div>
 
-			</div>
-			<br>
-		</div>
+    <body>
+        <div class="container">
 
-		
-			
-		</div>
+            <div class="row">
+                <div class="col-md-6 offset-md-2">
+
+                    <form (keyup)="findProfile()" #userForm="ngForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search Repositories" [(ngModel)]="userName" name="userName">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div *ngIf="profileService.newRepo">
+                <h1>Repositories</h1>
+                <div class="row m-0 p-ocol-container">
+                    <div class="col-container col-md-4 col card mb-5" *ngFor='let repository of profileService.newRepo'>
+                        <div class="card-header">
+                            <a href="{{repository.html_url}}" target="_blank">{{repository.name}}</a>
+                        </div>
+                        <div class="card-body">
+                            <p><span style="color: grey">Description:</span> <br>{{repository.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </div>
