@@ -1,0 +1,20 @@
+*{
+    background-image:url('https://wallpapercave.com/wp/wp3082278.jpg');
+    background-image: cover; 
+}
+
+body {
+    background-color: #f2f2f2;
+     
+  }
+  a {
+      color: #419641;
+      
+    
+  }
+  .nav-item .nav-link{
+    color: #419641;
+  }
+ul{
+    justify-content: space-between;
+}

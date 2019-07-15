@@ -8,7 +8,7 @@ import { ProfileService } from './profile.service';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Http, Headers } from '@angular/http';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+// import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserDirective } from './user.directive';
 import { UserComponent } from './user/user.component';
 import {RoutingModule} from './routing/routing.module';
@@ -19,7 +19,7 @@ import { TimeCountPipe } from './time-count.pipe';
   declarations: [
     AppComponent,
     ProfileComponent,
-    LandingPageComponent,
+    // LandingPageComponent,
     UserDirective,
     UserComponent,
     TimeCountPipe

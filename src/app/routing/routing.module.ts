@@ -1,4 +1,4 @@
-import { LandingPageComponent } from './../landing-page/landing-page.component';
+// import { LandingPageComponent } from './../landing-page/landing-page.component';
 import { AppComponent } from './../app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { ProfileComponent } from '../profile/profile.component';
 
 // Defining routes
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
+  // {path: '', component: LandingPageComponent},
  {path: 'user/repositories?', component: ProfileComponent},
  {path: 'userprofile?', component: UserComponent }
 ];
