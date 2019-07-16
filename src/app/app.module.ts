@@ -19,7 +19,7 @@ import { TimeCountPipe } from './time-count.pipe';
   declarations: [
     AppComponent,
     ProfileComponent,
-    // LandingPageComponent,
+    
     UserDirective,
     UserComponent,
     TimeCountPipe
