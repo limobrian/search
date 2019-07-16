@@ -16,7 +16,7 @@ export class ProfileService {
 
    private clientId = '8cbc60b506c591f98a0c';
   private accessToken = 'e54046e6604386f3c2ec288b8bf9150ba5410de4';
- private clientSecret = '1941e97b08b54d07e4094c737f92b69509724391';
+ private clientSecret = 'e54046e6604386f3c2ec288b8bf9150ba5410de4';
 
   constructor(private http: HttpClient) {
 
