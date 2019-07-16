@@ -1,74 +1,74 @@
 <div class="do">
-<div class="col">
+    <div class="col">
 
-    <form (keyup)="findProfile()" #userForm="ngForm">
-        <div class="form-group">
+        <form (keyup)="findProfile()" #userForm="ngForm">
+            <div class="form-group">
 
-            <input type="text" placeholder="Search User" [(ngModel)]="userName" name="userName">
-        </div>
-    </form>
+                <input type="text" placeholder="Search User" [(ngModel)]="userName" name="userName">
+            </div>
+        </form>
 
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{ user.login}}</h3>
-        </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 "> <img alt="User Pic" src="{{ user.avatar_url }}"
-                        class="img-circle img-responsive"> </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ user.login}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 "> <img alt="User Pic" src="{{ user.avatar_url }}"
+                            class="img-circle img-responsive"> </div>
 
-                <div class=" col-md-9 col-lg-9 ">
-                    <table class="table table-user-information">
-                        <tbody>
-                            <tr>
-                                <td>Full Name: </td>
-                                <td>{{ user.fname}}</td>
-                            </tr>
-                            <tr>
-                                <td>Repositories:</td>
-                                <td>
-                            <tr>
-                                <td>
-                                    {{user.repos_url}}
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Full Name: </td>
+                                    <td>{{ user.fname}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Repositories:</td>
+                                    <td>
+                                <tr>
+                                    <td>
+                                        {{user.repos_url}}
+                                    </td>
+                                    <td>
+                                        <a href="{{user.repo_url}}" class="btn btn-primary">View All</a>
+                                    </td>
+                                </tr>
+
                                 </td>
-                                <td>
-                                    <a href="{{user.repo_url}}" class="btn btn-primary">View All</a>
-                                </td>
-                            </tr>
 
-                            </td>
+                                </tr>
+                                <tr>
+                                    <td>Followers</td>
+                                    <td>{{ user.followers_url }}</td>
+                                </tr>
 
-                            </tr>
-                            <tr>
-                                <td>Followers</td>
-                                <td>{{ user.followers_url }}</td>
-                            </tr>
+                                <tr>
+                                <tr>
+                                    <td>Following</td>
+                                    <td>{{ user.following_url}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Created</td>
+                                    <td>{{user.createdAt | timeCount}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td appUser="">{{ user.mail }}</td>
+                                </tr>
 
-                            <tr>
-                            <tr>
-                                <td>Following</td>
-                                <td>{{ user.following_url}}</td>
-                            </tr>
-                            <tr>
-                                <td>Created</td>
-                                <td>{{user.createdAt | timeCount}}</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td appUser="">{{ user.mail }}</td>
-                            </tr>
+                            </tbody>
+                        </table>
 
-                        </tbody>
-                    </table>
-
-                    <a href="{{user.repo_url}}" class="btn btn-primary">View User on Github</a>
+                        <a href="{{user.repo_url}}" class="btn btn-primary">View User on Github</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="panel-footer">
-            <p style="font-size: 12px;">created by limooh</p>
-        </div>
+            <div class="panel-footer">
+                <p style="font-size: 12px;">created by limooh</p>
+            </div>
 
+        </div>
     </div>
-</div>
 </div>

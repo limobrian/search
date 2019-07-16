@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProfileService } from './profile.service';
-// import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Http, Headers } from '@angular/http';
-// import { LandingPageComponent } from './landing-page/landing-page.component';
+
 import { UserDirective } from './user.directive';
 import { UserComponent } from './user/user.component';
 import {RoutingModule} from './routing/routing.module';
@@ -29,8 +29,8 @@ import { TimeCountPipe } from './time-count.pipe';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RoutingModule
-    // NgxPaginationModule
+    RoutingModule,
+    NgxPaginationModule
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
