@@ -24,28 +24,28 @@ export class TimeCountPipe implements PipeTransform {
       }
       return this.months + ' months ago'
     }
-    if (this.days > 0) {
-      if (this.days == 1) {
-        return this.days + ' day ago'
-      }
-      return this.days + ' days ago'
-    }
-    if (this.hours > 0) {
-      if (this.hours == 1) {
-        return this.hours + ' hour ago'
-      }
-      return this.hours + ' hours ago'
-    }
-    if (this.minutes > 0) {
-      if (this.minutes == 1) {
-        return this.minutes + ' minute ago'
-      }
-      return this.minutes + ' minutes ago'
-    }
-    if(this.seconds==1){
-      return this.seconds+' second ago'
-    }
-    return this.seconds + ' seconds ago'
-  }
-}
+//     if (this.days > 0) {
+//       if (this.days == 1) {
+//         return this.days + ' day ago'
+//       }
+//       return this.days + ' days ago'
+//     }
+//     if (this.hours > 0) {
+//       if (this.hours == 1) {
+//         return this.hours + ' hour ago'
+//       }
+//       return this.hours + ' hours ago'
+//     }
+//     if (this.minutes > 0) {
+//       if (this.minutes == 1) {
+//         return this.minutes + ' minute ago'
+//       }
+//       return this.minutes + ' minutes ago'
+//     }
+//     if(this.seconds==1){
+//       return this.seconds+' second ago'
+//     }
+//     return this.seconds + ' seconds ago'
+//   }
+// }
 
