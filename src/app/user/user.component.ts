@@ -14,10 +14,10 @@ import { FormsModule } from '@angular/forms';
   providers: [ProfileService]
 })
 export class UserComponent implements OnInit {
-  // user: Users;
-  // repos: Repository;
-  // userRepos: any;
-  // userName: string;
+  user: Users;
+  repos: Repository;
+  userRepos: any;
+  userName: string;
 
   constructor(private profileService: ProfileService) {
   }
